@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+        <canvas id="myCanvas" width="800" height="600" style="background-color: white"></canvas>
+
+        <div class="square">
+            <input type="text" id="rotateDegree">
+            <button id="rotateBtn" class="icon rotate-icon">旋转</button>
+        </div>
+<script>
+    let myImage;
+let ctx;
+let img;
+window.onload = function () {
+    myImage = document.getElementById("myCanvas");
+    ctx = myImage.getContext("2d");
+
+    img = new Image();
+    img.src = "./img/111.png";
+    img.onload = function () {
+        ctx.drawImage(img, myImage.width / 2 - img.width / 2, myImage.height / 2 - img.height / 2);
+    };
+
+    let degree = 0;
+    $("#rotateBtn").click(function () {
+        let rotateInput = $("#rotateDegree").val();//获取旋转度数
+        degree += parseInt(rotateInput);
+        degree %= 360;
+
+        ctx.save();
+        ctx.clearRect(0, 0, myImage.width, myImage.height);
+        ctx.translate(myImage.width / 2, myImage.height / 2);
+        ctx.rotate(degree / 180 * Math.PI);
+        ctx.translate(-myImage.width / 2, -myImage.height / 2);
+        ctx.drawImage(img, myImage.width / 2 - img.width / 2, myImage.height / 2 - img.height / 2);//这一行代码将图片画在了画布中心
+        ctx.restore();
+    });
+};
+
+</script>
+</body>
+</html>

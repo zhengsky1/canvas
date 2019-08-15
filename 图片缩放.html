@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="./jquery.min.js"></script>
- 
-    <style>
-
-    </style>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
 </head>
 <body>
 <canvas id="myCanvas" width="800" height="600" style="background-color: white"></canvas>
@@ -24,7 +20,7 @@ window.onload = function () {
     ctx = myImage.getContext("2d");
 
     img = new Image();
-    img.src = "../文档/下面的切图/111.png";
+    img.src = "./img/111.png";
     img.onload = function () {
         ctx.drawImage(img, myImage.width / 2 - img.width / 2, myImage.height / 2 - img.height / 2);
     };
