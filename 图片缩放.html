@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+ 
+    <style>
+
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600" style="background-color: white"></canvas>
+<div class="rangeContainer">
+    <input type="range" id="scale-range" min="0.5" max="3.0" step="0.01" value="1.0" style="display: block;">
+</div>
+</body>
+<script>
+    let myImage;
+let ctx;
+let img;
+window.onload = function () {
+    myImage = document.getElementById("myCanvas");
+    ctx = myImage.getContext("2d");
+
+    img = new Image();
+    img.src = "../文档/下面的切图/111.png";
+    img.onload = function () {
+        ctx.drawImage(img, myImage.width / 2 - img.width / 2, myImage.height / 2 - img.height / 2);
+    };
+
+    $("#scale-range").mousemove(function () {
+        let scaleInput = $("#scale-range").val();
+        ctx.clearRect(0, 0, myImage.width, myImage.height);
+        ctx.save();
+        ctx.translate(myImage.width / 2 - img.width / 2 * scaleInput, myImage.height / 2 - img.height / 2 * scaleInput);
+        ctx.scale(scaleInput, scaleInput);
+        ctx.drawImage(img, 0, 0);
+        ctx.restore();
+    });
+}
+
+</script>
+</html>
