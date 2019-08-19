@@ -1,0 +1,21 @@
+1.vue-cil3的环境变量配置
+  https://www.cnblogs.com/sinosaurus/p/10294399.html
+  https://segmentfault.com/a/1190000015133974
+
+
+2.
+1.videojs在未播放时，会显示一个大的播放按钮,如何居中
+加上（class="video-js vjs-big-play-centered"）vjs-big-play-centered
+
+2.videojs在未播放时显示播放按钮
+.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+    display: block;
+}
+3.点击屏幕切换播放/暂停
+.video-js.vjs-playing .vjs-tech {
+    pointer-events: auto;
+}
+
+
+http://www.mamicode.com/info-detail-2259727.html

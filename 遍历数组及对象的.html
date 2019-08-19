@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1.一个适用于数组和对象的forEach遍历方法
+        var arr=['value1','value2']
+        var obj={key1:'valueip',key2:'valueao'}
+  function forEach(obj,fn){
+     //判断obj是否属于数组
+      if(obj instanceof Array){
+        //数组的forEach遍历方法，item代表成员，index代表成员在数组位置
+            obj.forEach(function(item,index){
+                fn(index,item);
+            })
+        }else{
+            //对象for...in遍历方法
+            for (key in obj){
+                //obj.hasOwnProperty(key)判断属性key是否是obj自己的属性，而不是继承的属性
+                if(obj.hasOwnProperty(key)){
+                    fn(key,obj[key]);
+                }
+            }
+        }
+    }
+    forEach(obj,function(key,value){
+        console.log('value='+value)
+        console.log('key='+key)
+    })
+// 2.获取类型的长度方法
+    function getlength(item){
+        if(Object.prototype.toString.call(item) === "[object Array]"){
+            return item.length
+        }else if(Object.prototype.toString.call(item) === "[object Object]"){
+            return Object.keys(item).length
+        }else if(Object.prototype.toString.call(item) === "[object String]"){
+            return  item.length
+        }
+    }
+    </script>
+</body>
+</html>
