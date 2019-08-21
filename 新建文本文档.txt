@@ -1,18 +1,18 @@
-1.vue-cil3µÄ»·¾³±äÁ¿ÅäÖÃ
+1.vue-cil3çš„ç¯å¢ƒå˜é‡é…ç½®
   https://www.cnblogs.com/sinosaurus/p/10294399.html
   https://segmentfault.com/a/1190000015133974
 
 
 2.
-1.videojsÔÚÎ´²¥·ÅÊ±£¬»áÏÔÊ¾Ò»¸ö´óµÄ²¥·Å°´Å¥,ÈçºÎ¾ÓÖĞ
-¼ÓÉÏ£¨class="video-js vjs-big-play-centered"£©vjs-big-play-centered
+1.videojsåœ¨æœªæ’­æ”¾æ—¶ï¼Œä¼šæ˜¾ç¤ºä¸€ä¸ªå¤§çš„æ’­æ”¾æŒ‰é’®,å¦‚ä½•å±…ä¸­
+åŠ ä¸Šï¼ˆclass="video-js vjs-big-play-centered"ï¼‰vjs-big-play-centered
 
-2.videojsÔÚÎ´²¥·ÅÊ±ÏÔÊ¾²¥·Å°´Å¥
+2.videojsåœ¨æœªæ’­æ”¾æ—¶æ˜¾ç¤ºæ’­æ”¾æŒ‰é’®
 .vjs-paused .vjs-big-play-button,
 .vjs-paused.vjs-has-started .vjs-big-play-button {
     display: block;
 }
-3.µã»÷ÆÁÄ»ÇĞ»»²¥·Å/ÔİÍ£
+3.ç‚¹å‡»å±å¹•åˆ‡æ¢æ’­æ”¾/æš‚åœ
 .video-js.vjs-playing .vjs-tech {
     pointer-events: auto;
 }
