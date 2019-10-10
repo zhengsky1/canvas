@@ -22,3 +22,11 @@ http://www.mamicode.com/info-detail-2259727.html
 
 
 CoreTelephony   iOS中利用CoreTelephony获取用户当前网络状态(判断2G,3G,4G)
+
+
+https://www.lzzj.online/articleDetail/39
+
+https://segmentfault.com/q/1010000015653993
+
+
+https://axios.nuxtjs.org/
